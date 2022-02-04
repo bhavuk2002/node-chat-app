@@ -7,7 +7,7 @@ const {generatedMessage, generatedLocationMessage} = require('./utlis/messages')
 const {addUser, removeUser, getUser, getUsersInRoom } = require('./utlis/users')
 const app = express()
 const server = http.createServer(app)
-const port = 3000 || process.env.PORT
+const port = process.env.PORT || 3000
 const io = socketio(server)
 
 const publicDirectoryPath = path.join(__dirname, '../public')
